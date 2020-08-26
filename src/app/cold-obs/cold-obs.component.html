@@ -1,0 +1,25 @@
+<div class="container alert alert-primary" role="alert">
+    <div class="row">
+        <h3>Cold Observable demo</h3>
+    </div>
+    <div class="row">
+      <div class="col-sm">
+        <button (click)="subscribeColdBtn1()">Subscribe</button>
+        Subscription made at {{connection1}}
+        <ul id="list1">
+            <li  *ngFor="let val1 of values1">
+                {{val1}}
+            </li>
+        </ul>
+      </div>
+      <div class="col-sm">
+        <button (click)="subscribeColdBtn2()">Subscribe</button>
+        Subscription made at {{connection2}}
+        <ul id="list2">
+            <li  *ngFor="let val2 of values2">
+                {{val2}}
+            </li>
+        </ul>
+      </div>
+    </div>
+  </div>
