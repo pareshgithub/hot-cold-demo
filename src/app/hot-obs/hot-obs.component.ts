@@ -13,8 +13,8 @@ export class HotObsComponent implements OnInit {
   subscription1 : Subscription;
   subscription2 : Subscription;
 
-  connection1 : number;
-  connection2 : number;
+  connection1 : Date;
+  connection2 : Date;
 
   values1 : number [] = [];
   values2 : number [] = [];
@@ -28,7 +28,7 @@ export class HotObsComponent implements OnInit {
   }
 
   subscribeHotBtn1(){
-    this.connection1 = Date.now();
+    this.connection1 = new Date();
     this.subscription1 = this.observable.subscribe((val) => {
       console.log("Inside Data Subscription1 - "+ val);
       this.values1.push(val);
@@ -42,7 +42,7 @@ export class HotObsComponent implements OnInit {
   }
 
   subscribeHotBtn2(){
-    this.connection2 = Date.now();
+    this.connection2 = new Date();
     this.subscription2 = this.observable.subscribe((val) => {
       console.log("Inside Data Subscription2 - "+ val);
       this.values2.push(val);
